@@ -1,0 +1,27 @@
+spring:
+
+  datasource:
+    url: jdbc:h2:file:~/test;
+    username: sa
+    password:
+
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+security:
+  token:
+    issuer: antonio
+
+    access_secret: meu_access_secret
+    access_expiration: 1800000
+
+    refresh_secret: meu_refresh_secret
+    refresh_expiration: 86400000
